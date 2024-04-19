@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.board {
+    border-radius: .5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.2);
+    min-height: 620px;
+    min-width: 430px;
+}
+
+@keyframes breathe {
+    0% {
+        r: 12;
+    }
+
+    50% {
+        r: 14;
+    }
+
+    100% {
+        r: 12;
+    }
+}
+
+@keyframes rotate {
+    /* 0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    } */
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        fill: red;
+    }
+
+    25% {
+        fill: yellow;
+    }
+
+    50% {
+        fill: green;
+    }
+
+    75% {
+        fill: blue;
+    }
+
+    100% {
+        fill: red;
+    }
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.breathing-circle {
+    animation: breathe 1.5s infinite linear;
+}
+
+.rotating-circle {
+    stroke: rgb(0, 83, 21);
+    stroke-width: 2;
+    stroke-dasharray: 10, 10;
+}
